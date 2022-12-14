@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clean Architecture Devs</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
+    <meta name="author" content="Christian Bergau" />
+    <meta name="description" content="Clean Architecture explained and examples shown" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header>Clean Architecure Devs</header>
+<main>
+    <h2>Clean Architecture Artifacts</h2>
+    <p>There are many artifacts in Clean Architecture. It is important to understand their role and why they are there.</p>
+
+    <h2>Controller</h2>
+    <p>The Controller takes the HTTP Request and transforms it into the UseCase Request.</p>
+
+    <h2>UseCase Request</h2>
+    <p>The UseCase Request is a data structure without any logic. It contains request data as a plain DTO (Data Transfer Object).</p>
+
+    <h2>UseCase Interactor</h2>
+    <p>The Interactor orchestrates the use case. It takes the data from the request, validates it, fetches the Entities from the Repository Interface, let the Entity execute the business rules, and save the Entities in their new states via the Repository Interface.</p>
+
+    <h2>Repository Interface</h2>
+    <p>Defines the interface on how to access and save data to the Data Source.</p>
+
+    <h2>Entities</h2>
+    <p>The Business Objects. Contain all the Business Rules. When you like to do Domain Driven Design, this is the Domain Model.</p>
+</main>
+</body>
+</html>
